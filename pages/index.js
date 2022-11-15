@@ -1,10 +1,6 @@
 import React from "react";
 import HeadComponent from '../components/Head';
 
-// Constants
-const TWITTER_HANDLE = "_buildspace";
-const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
-
 const App = () => {
   
   
@@ -13,22 +9,15 @@ const App = () => {
       <HeadComponent/>
       <div className="container">
         <header className="header-container">
-          <p className="header"> 😳 Buildspace Emoji Store 😈</p>
-          <p className="sub-text">The only emoji store that accepts sh*tcoins</p>
+          <p className="header"> —△🌈 Pink Floyd GIF Store</p>
+          <p className="sub-text">The Dark Side Of The Store</p>
         </header>
 
         <main>
-          <img src="https://media.giphy.com/media/eSwGh3YK54JKU/giphy.gif" alt="emoji" />
+          <img src="https://media4.giphy.com/media/l0MYKMrQnwNvLjYhW/giphy.gif?cid=ecf05e47tu4c6ypa604nj709idisnd4iuhfliiohjmbxlkhk&rid=giphy.gif&ct=g" alt="The Dark Side of The Moon" />
         </main>
 
         <div className="footer-container">
-          <img alt="Twitter Logo" className="twitter-logo" src="twitter-logo.svg" />
-          <a
-            className="footer-text"
-            href={TWITTER_LINK}
-            target="_blank"
-            rel="noreferrer"
-          >{`built on @${TWITTER_HANDLE}`}</a>
         </div>
       </div>
     </div>
