@@ -1,11 +1,20 @@
 [
-    {
-        "id": 1,
-        "name": "Hey Hey Rise Up",
-        "price": "1",
-        "description": "by Pink Floyd",
-        "image_url": "https://cloudflare-ipfs.com/ipfs/QmPL3LTC6BRWqUC2Lg1s19LcaguKyb9cZ8UQMtGT6Y1tt4",
-        "filename": "hey-hey-rise-up.jpg",
-        "hash": "QmPL3LTC6BRWqUC2Lg1s19LcaguKyb9cZ8UQMtGT6Y1tt4"
-    }
+  {
+    "id": 1,
+    "name": "Hey Hey Rise Up",
+    "price": "1",
+    "description": "by Pink Floyd",
+    "image_url": "https://cloudflare-ipfs.com/ipfs/QmPL3LTC6BRWqUC2Lg1s19LcaguKyb9cZ8UQMtGT6Y1tt4",
+    "filename": "hey-hey-rise-up.jpg",
+    "hash": "QmPL3LTC6BRWqUC2Lg1s19LcaguKyb9cZ8UQMtGT6Y1tt4"
+  },
+  {
+    "id": 2,
+    "name": "Welcome To The Machine",
+    "price": "3",
+    "image_url": "https://cloudflare-ipfs.com/ipfs/QmXbSyg3LbEyWLwpaq912bc6aePft39r8SrMqL3yJ96Sn2",
+    "description": "By Pink Floyd",
+    "filename": "Welcome.jpg",
+    "hash": "QmXbSyg3LbEyWLwpaq912bc6aePft39r8SrMqL3yJ96Sn2"
+  }
 ]
