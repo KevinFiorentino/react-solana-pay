@@ -1,11 +1,11 @@
 [
     {
         "id": 1,
-        "name": "OG Emoji pack",
-        "price": "0.09",
-        "description": "Get this fire emoji pack for only $0.09! Includes 3 hot emojis: Forreal, Flooshed, and Sheesh!",
-        "image_url": "https://i.imgur.com/rVD8bjt.png",
+        "name": "Hey Hey Rise Up",
+        "price": "1.5",
+        "description": "by Pink Floyd",
+        "image_url": "https://cloudflare-ipfs.com/ipfs/QmPL3LTC6BRWqUC2Lg1s19LcaguKyb9cZ8UQMtGT6Y1tt4",
         "filename": "hey-hey-rise-up.jpg",
-        "hash": "QmRzoKPdc4LysevTMv8XeZpGAZZsxpPfEGhzFGBeXu76E6"
+        "hash": "QmPL3LTC6BRWqUC2Lg1s19LcaguKyb9cZ8UQMtGT6Y1tt4"
     }
 ]
