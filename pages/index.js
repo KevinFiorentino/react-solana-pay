@@ -1,23 +1,36 @@
-import React from 'react';
-import dynamic from 'next/dynamic';
+import React, { useEffect, useState } from 'react';
+import Product from "../components/Product";
+
 import { useWallet } from '@solana/wallet-adapter-react';
+import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 
 const App = () => {
 
-  const WalletMultiButtonDynamic = dynamic(
-    async () =>
-      (await import('@solana/wallet-adapter-react-ui')).WalletMultiButton,
-    { ssr: false }
-  );
-  
   const { publicKey } = useWallet();
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    if (publicKey) {
+      fetch(`/api/fetchProducts`)
+        .then(response => response.json())
+        .then(data => {
+          setProducts(data);
+          console.log("Products", data);
+        });
+    }
+  }, [publicKey]);
 
   const renderNotConnectedContainer = () => (
-    <div>
-      <img src='https://media4.giphy.com/media/l0MYKMrQnwNvLjYhW/giphy.gif?cid=ecf05e47tu4c6ypa604nj709idisnd4iuhfliiohjmbxlkhk&rid=giphy.gif&ct=g' alt='The Dark Side of The Moon' />
-      <div className='button-container'>
-        <WalletMultiButtonDynamic className='cta-button connect-wallet-button' />
-      </div>    
+    <div className="button-container">
+      <WalletMultiButton className="cta-button connect-wallet-button" />
+    </div>
+  );
+
+  const renderItemBuyContainer = () => (
+    <div className="products-container">
+      {products.map((product) => (
+        <Product key={product.id} product={product} />
+      ))}
     </div>
   );
 
@@ -30,11 +43,10 @@ const App = () => {
         </header>
 
         <main>
-          {/* We only render the connect button if public key doesn't exist */}
-          {publicKey ? 'Connected!' : renderNotConnectedContainer()}
+          {publicKey ? renderItemBuyContainer() : renderNotConnectedContainer()}
         </main>
 
-        <div className='footer-container'>
+        <div className="footer-container">
         </div>
       </div>
     </div>
