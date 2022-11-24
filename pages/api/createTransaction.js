@@ -4,7 +4,10 @@ import { createTransferCheckedInstruction, getAssociatedTokenAddress, getMint } 
 import BigNumber from "bignumber.js";
 import products from "./products.json";
 
-const usdcAddress = new PublicKey("Gh9ZwEmdLJ8DscKNTkTqPbNwLNNBjuSzaG9Vp2KGtKJr");    // USDC-Dev address
+// Mainnet USDC = https://explorer.solana.com/address/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
+// Devnet USDC-Dev = https://explorer.solana.com/address/Gh9ZwEmdLJ8DscKNTkTqPbNwLNNBjuSzaG9Vp2KGtKJr?cluster=devnet
+const usdcAddress = new PublicKey("Gh9ZwEmdLJ8DscKNTkTqPbNwLNNBjuSzaG9Vp2KGtKJr");
+
 const sellerAddress = "9BvQr37W6ohEKk3aHrTZ9gRAN2RK1LuUGPmKn5C2H6XC";                 // Kevin Wallet 1 (Must have USDC-Dev previously)
 const sellerPublicKey = new PublicKey(sellerAddress);
 
@@ -34,6 +37,7 @@ const createTransaction = async (req, res) => {
     const bigAmount = BigNumber(itemPrice);
     const buyerPublicKey = new PublicKey(buyer);
 
+    // const network = WalletAdapterNetwork.Mainnet;
     const network = WalletAdapterNetwork.Devnet;
     const endpoint = clusterApiUrl(network);
     const connection = new Connection(endpoint);
